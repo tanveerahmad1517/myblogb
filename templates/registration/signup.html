@@ -1,0 +1,18 @@
+{% extends "posts/layout.html" %}
+
+{% load widget_tweaks %}
+
+
+{% block post_content %}
+
+  	<div class="col s8 m-8">
+<h2>Sign up</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="no-border" type="submit"> <a class="waves-effect waves-light btn-large">Signup</a></button>
+</form>
+</div>
+
+
+{% endblock %}

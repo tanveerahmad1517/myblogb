@@ -1,0 +1,17 @@
+{% extends "posts/layout.html" %}
+{% block post_content %}
+    {% if request.GET.q %}
+        <p class='lead'>Results for <b> {{ request.GET.q }} </b> </p>
+       <hr/>
+    {% endif %}
+   
+        <h1>Posts</h1>
+           <hr/>
+    {% for post in posts %}
+        <h5> <a href="{% url 'posts:detail' post.slug post.pk %}"> {{post.title}} </a> 
+        </h5>
+    {% empty %}
+        <p>No users found</p>
+    {% endfor %}
+     
+{% endblock %}

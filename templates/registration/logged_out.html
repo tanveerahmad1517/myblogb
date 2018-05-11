@@ -1,0 +1,12 @@
+{% extends "posts/layout.html" %}
+
+{% load widget_tweaks %}
+
+
+{% block post_content %}
+
+<p>Logged out!</p>  
+
+<a href="{% url 'login'%}">Click here to login again.</a>
+
+{% endblock %}
